@@ -5,7 +5,7 @@ import { ArrowRight, CheckCircle, Shield, Clock, Sparkles } from "lucide-react";
 
 const trustMetrics = [
     { value: "150", suffix: "+", label: "Propriétés achetées" },
-    { value: "4.9", suffix: "/5", label: "Note Google" },
+    { value: "4.9", suffix: "/5", label: "Satisfaction Client" },
     { value: "24", suffix: "h", label: "Délai d'offre" },
 ];
 
