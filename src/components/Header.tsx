@@ -84,13 +84,13 @@ export default function Header() {
                         {/* Desktop Actions */}
                         <div className="hidden lg:flex items-center gap-5">
                             <a
-                                href="tel:+15141234567"
+                                href="tel:+15146000078"
                                 className="flex items-center gap-2 text-primary-500 font-semibold hover:text-primary-400 transition-colors duration-300"
                             >
                                 <div className="w-9 h-9 rounded-full bg-primary-50 flex items-center justify-center">
                                     <Phone className="w-4 h-4" />
                                 </div>
-                                <span className="text-[15px]">(514) 123-4567</span>
+                                <span className="text-[15px]">(514) 600-0078</span>
                             </a>
                             <Link
                                 href="#contact"
@@ -156,13 +156,13 @@ export default function Header() {
 
                     <div className="pt-6 border-t border-neutral-100 space-y-4">
                         <a
-                            href="tel:+15141234567"
+                            href="tel:+15146000078"
                             className="flex items-center gap-3 px-4 py-3 text-primary-600 font-semibold"
                         >
                             <div className="w-10 h-10 rounded-full bg-primary-50 flex items-center justify-center">
                                 <Phone className="w-5 h-5" />
                             </div>
-                            <span>(514) 123-4567</span>
+                            <span>(514) 600-0078</span>
                         </a>
                         <Link
                             href="#contact"

@@ -124,14 +124,14 @@ export default function Contact() {
                             <p className="text-sm text-neutral-500 mb-4">Préférez-vous parler directement?</p>
                             <div className="flex flex-wrap gap-4">
                                 <a
-                                    href="tel:+15141234567"
+                                    href="tel:+15146000078"
                                     className="inline-flex items-center gap-2 px-5 py-3 rounded-xl font-semibold text-primary-600 bg-white transition-all duration-300 hover:shadow-md border border-neutral-100"
                                 >
                                     <Phone className="w-5 h-5" />
-                                    <span>(514) 123-4567</span>
+                                    <span>(514) 600-0078</span>
                                 </a>
                                 <a
-                                    href="https://wa.me/15141234567"
+                                    href="https://wa.me/15146000078"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="inline-flex items-center gap-2 px-5 py-3 rounded-xl font-semibold text-white bg-whatsapp transition-all duration-300 hover:shadow-md hover:brightness-110"

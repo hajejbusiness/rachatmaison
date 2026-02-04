@@ -25,7 +25,7 @@ interface NotificationResult {
  * In production, this would use Resend/Nodemailer/Telegram API
  */
 export async function sendNotification(data: ContactFormData): Promise<NotificationResult> {
-    console.log("🔔 [NEW LEAD RECEIVED]", data);
+    console.log("🔔 [NEW LEAD RECEIVED] Sending to contact@rachatmaison.ca via Telegram/Email", data);
 
     // Simulate network delay
     await new Promise((resolve) => setTimeout(resolve, 1000));

@@ -54,18 +54,18 @@ export default function Footer() {
                         </p>
                         <div className="space-y-3">
                             <a
-                                href="tel:+15141234567"
+                                href="tel:+15146000078"
                                 className="flex items-center gap-3 text-primary-200 hover:text-white transition-colors duration-300 text-sm"
                             >
                                 <Phone className="w-4 h-4" />
-                                <span>(514) 123-4567</span>
+                                <span>(514) 600-0078</span>
                             </a>
                             <a
-                                href="mailto:info@rachatmaison.ca"
+                                href="mailto:contact@rachatmaison.ca"
                                 className="flex items-center gap-3 text-primary-200 hover:text-white transition-colors duration-300 text-sm"
                             >
                                 <Mail className="w-4 h-4" />
-                                <span>info@rachatmaison.ca</span>
+                                <span>contact@rachatmaison.ca</span>
                             </a>
                             <div className="flex items-center gap-3 text-primary-200 text-sm">
                                 <MapPin className="w-4 h-4" />

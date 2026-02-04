@@ -40,6 +40,13 @@ const situations = [
         bg: "bg-primary-50",
     },
     {
+        icon: TrendingDown,
+        title: "Avis de 60 jours",
+        description: "La banque menace de reprendre votre maison? On peut intervenir rapidement pour payer vos dettes et sauver votre crédit.",
+        color: "text-error",
+        bg: "bg-red-50",
+    },
+    {
         icon: Plane,
         title: "Relocalisation",
         description: "Nouveau travail ailleurs? On ferme à votre calendrier pour que vous partiez l'esprit tranquille.",

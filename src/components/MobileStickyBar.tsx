@@ -23,7 +23,7 @@ export default function MobileStickyBar() {
         <div className="fixed bottom-0 left-0 right-0 z-50 bg-white border-t border-neutral-200 shadow-[0_-4px_20px_rgba(0,0,0,0.1)] p-4 lg:hidden animate-in slide-in-from-bottom duration-300">
             <div className="flex gap-3 max-w-sm mx-auto">
                 <a
-                    href="tel:+15141234567"
+                    href="tel:+15146000078"
                     className="flex-1 flex items-center justify-center gap-2 bg-neutral-100 text-neutral-900 font-semibold py-3 rounded-xl active:scale-95 transition-transform"
                 >
                     <Phone className="w-4 h-4" />

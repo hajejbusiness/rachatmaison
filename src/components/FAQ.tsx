@@ -30,7 +30,7 @@ const faqs = [
     },
     {
         question: "Qui paie le notaire?",
-        answer: "Dans la majorité des cas, nous payons les frais de notaire pour l'acte de vente. C'est un autre 1500$+ que vous économisez.",
+        answer: "Dans la majorité des cas, nous payons les frais de notaire pour l'acte de vente.",
     },
 ];
 
