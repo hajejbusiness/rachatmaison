@@ -25,11 +25,62 @@ import { Resend } from 'resend';
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 /**
- * Sends a real email using Resend
+ * Sends a notification to Telegram
+ */
+async function sendTelegramMessage(data: ContactFormData): Promise<void> {
+    if (!process.env.TELEGRAM_BOT_TOKEN || !process.env.TELEGRAM_CHAT_ID) {
+        console.warn("⚠️ Telegram credentials missing. Skipping Telegram notification.");
+        return;
+    }
+
+    const message = `
+🚨 *NOUVEAU LEAD RACHATMAISON* 🚨
+
+👤 *Nom:* ${data.name}
+📱 *Tél:* \`${data.phone}\`
+📧 *Email:* ${data.email || 'Non spécifié'}
+📍 *Ville:* ${data.city || 'Non spécifié'}
+🏠 *Situation:* ${data.situation || 'Non spécifié'}
+🏡 *Type:* ${data.propertyType || 'Non spécifié'}
+
+📝 *Message:*
+${data.message || 'Aucun message'}
+
+🔗 _Source: ${data.source}_
+    `.trim();
+
+    try {
+        const response = await fetch(`https://api.telegram.org/bot${process.env.TELEGRAM_BOT_TOKEN}/sendMessage`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                chat_id: process.env.TELEGRAM_CHAT_ID,
+                text: message,
+                parse_mode: 'Markdown',
+            }),
+        });
+
+        if (!response.ok) {
+            const err = await response.text();
+            console.error("❌ Telegram API Error:", err);
+        } else {
+            console.log("✅ Telegram notification sent.");
+        }
+    } catch (e) {
+        console.error("❌ Failed to send Telegram message:", e);
+    }
+}
+
+/**
+ * Sends a real email using Resend + Telegram Notification
  */
 export async function sendNotification(data: ContactFormData): Promise<NotificationResult> {
-    console.log("🔔 [NEW LEAD] Processing email via Resend...", data);
+    console.log("🔔 [NEW LEAD] Processing notifications...", data);
 
+    // 1. Send Telegram (Fire and forget, don't block email)
+    sendTelegramMessage(data);
+
+    // 2. Send Email (Critical path)
     if (!process.env.RESEND_API_KEY) {
         console.error("❌ RESEND_API_KEY is missing");
         return { success: false, error: "Configuration Error: Missing API Key" };
